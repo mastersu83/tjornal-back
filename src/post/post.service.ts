@@ -14,7 +14,7 @@ export class PostService {
   ) {}
 
   create(createPostDto: CreatePostDto) {
-    return this.postRepository.save({ ...createPostDto, user: { id: 7 } });
+    return this.postRepository.save({ ...createPostDto, user: { id: 1 } });
   }
 
   findAll() {
@@ -37,11 +37,6 @@ export class PostService {
       items,
       total,
     };
-    // return this.postRepository.find({
-    //   order: {
-    //     views: 'DESC',
-    //   },
-    // });
   }
 
   async search(createPostDto: SearchPostDto) {
@@ -84,11 +79,6 @@ export class PostService {
       items,
       total,
     };
-    // return this.postRepository.find({
-    //   order: {
-    //     createdAt: 'DESC',
-    //   },
-    // });
   }
 
   async findOne(id: number) {

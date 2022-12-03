@@ -2,7 +2,7 @@ import { IsEmail, IsNotEmpty, Length } from 'class-validator';
 
 export class CreateUserDto {
   @Length(3, 18, { message: 'Имя минимум 3 символа' })
-  fullName: string;
+  fullName?: string;
 
   @IsEmail(undefined, { message: 'Неверная почта' })
   email: string;
